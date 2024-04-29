@@ -1,5 +1,5 @@
 import { TopBar } from './Components';
-import { Hero, MiniServices, Team } from './Pages';
+import { Hero, MiniServices, Stats, Team, Treatments } from './Pages';
 
 const App = () => {
   return (
@@ -7,7 +7,9 @@ const App = () => {
       <TopBar />
       <div className=''>
         <Hero />
+        <Treatments />
         <MiniServices />
+        <Stats/>
         <Team />
       </div>
     </div>

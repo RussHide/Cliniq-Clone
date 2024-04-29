@@ -7,10 +7,11 @@ import TestLab from './TestLab'
 import Treatments from './Treatments'
 import WorkingHours from './WorkingHours'
 import Hero from './Hero'
-
+import Stats from './Stats'
 
 export {
     AboutUs,
+    Stats,
     Hero,
     MiniServices,
     CommonConditions,

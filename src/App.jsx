@@ -1,5 +1,5 @@
 import { TopBar } from './Components';
-import { Hero, MiniServices, Stats, Team, Treatments } from './Pages';
+import { CommonConditions, Hero, MiniServices, Stats, Team, Treatments } from './Pages';
 
 const App = () => {
   return (
@@ -8,6 +8,7 @@ const App = () => {
       <div className=''>
         <Hero />
         <Treatments />
+        <CommonConditions />
         <MiniServices />
         <Stats/>
         <Team />

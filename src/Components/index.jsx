@@ -5,9 +5,13 @@ import WorkingHoursCard from './WorkingHoursCard'
 import TopBar from './TopBar'
 import TeamCard from './TeamCard'
 import CircularStat from './CircularStat'
+import ConditionsTab from './ConditionsTab'
+import Condition from './Condition'
 
 export {
+    Condition,
     TopBar,
+    ConditionsTab,
     CircularStat,
     TeamCard,
     Navbar,

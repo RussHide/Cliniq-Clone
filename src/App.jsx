@@ -1,5 +1,5 @@
-import { TopBar } from './Components';
-import { CommonConditions, Hero, MiniServices, Stats, Team, Treatments } from './Pages';
+import { Footer, TopBar } from './Components';
+import { CommonConditions, Hero, MiniServices, Stats, Team, TestLab, Treatments } from './Pages';
 
 const App = () => {
   return (
@@ -7,12 +7,14 @@ const App = () => {
       <TopBar />
       <div className=''>
         <Hero />
+        <TestLab />
         <Treatments />
         <CommonConditions />
         <MiniServices />
-        <Stats/>
+        <Stats />
         <Team />
       </div>
+      <Footer />
     </div>
   )
 }

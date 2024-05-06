@@ -7,9 +7,11 @@ import TeamCard from './TeamCard'
 import CircularStat from './CircularStat'
 import ConditionsTab from './ConditionsTab'
 import Condition from './Condition'
+import Footer from './Footer'
 
 export {
     Condition,
+    Footer,
     TopBar,
     ConditionsTab,
     CircularStat,

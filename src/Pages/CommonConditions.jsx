@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react"
 import { Condition, ConditionsTab } from "../Components"
-import { LuHeartHandshake } from "react-icons/lu"
-import { PiScreencastBold } from "react-icons/pi"
 import ConditionOne from '@img/ConditionOne.jpg'
 import ConditionTwo from '@img/ConditionTwo.jpg'
 import ConditionThree from '@img/ConditionThree.jpg'
 import ConditionFour from '@img/ConditionFour.jpg'
-import ConditionFive from '@img/Stats.jpg'
+import ConditionFive from '@img/ConditionFive.jpg'
 
 const CommonConditions = () => {
   const [currentCondition, setCurrentCondition] = useState(1)
-  const [selectedConditionData, setSelectedConditionData] = useState({ id: 1, title: 'Arrhythmia', descriptionOne: 'We work to be trusted by patients, a potential for health and valued partner in the community, and creators of positive change. A community in which all people achieve their full potential for health and well-being across the lifespan.', descriptionTwo: 'We use a team approach to providing health care, and involve the patient as part of our team. Involvement by our staff in the community enhances our ability to provide effective health care.', list: [{ id: 1, icon: <LuHeartHandshake />, description: 'For everyday care or life-changing care, you can count on us to keep you and loved ones and healthy.' }, { id: 2, icon: <PiScreencastBold />, description: 'You can count on us to keep you and your loved ones safe and healthy. Our team of expert prominent physicians.' }] })
+  const [selectedConditionData, setSelectedConditionData] = useState({ id: 1, title: 'Arrhythmia', descriptionOne: 'We work to be trusted by patients, a potential for health and valued partner in the community, and creators of positive change. A community in which all people achieve their full potential for health and well-being across the lifespan.', descriptionTwo: 'We use a team approach to providing health care, and involve the patient as part of our team. Involvement by our staff in the community enhances our ability to provide effective health care.', list: ['Weakness', 'Fainting', 'Heart failure'], url: ConditionOne })
   const conditionsData = [
     {
       id: 1, title: 'Arrhythmia',
@@ -23,7 +21,7 @@ const CommonConditions = () => {
       id: 2, title: 'Atherosclerosis',
       descriptionOne: 'Atherosclerosis is thickening or hardening of the arteries caused by a buildup of plaque in the inner lining of an artery. Can cause a heart attack, stroke, aneurysm, or blood clot.',
       descriptionTwo: 'Atherosclerosis is the buildup of fats, cholesterol and other substances in and on your artery walls. This buildup is called plaque. The plaque can cause your arteries to narrow, blocking blood flow. The plaque can also burst, leading to a blood clot.',
-      list: ['Chest Pain', 'Fatigue', 'Shortness of breath'],
+      list: ['Chest', 'Fatigue', 'Shortness of breath'],
       url: ConditionTwo
     },
     {
@@ -57,11 +55,11 @@ const CommonConditions = () => {
   return (
     <div className="container mx-auto bg-[#F3F3F3] ">
       <div className="flex justify-center w-full px-14 items-end">
-        <ConditionsTab setCurrentCondition={setCurrentCondition} keyPosition='1' title="Arrhythmia" />
-        <ConditionsTab setCurrentCondition={setCurrentCondition} keyPosition='2' title="Atherosclerosis" />
-        <ConditionsTab setCurrentCondition={setCurrentCondition} keyPosition='3' title="Cardiomyopathy" />
-        <ConditionsTab setCurrentCondition={setCurrentCondition} keyPosition='4' title="Congenital heart defects" />
-        <ConditionsTab setCurrentCondition={setCurrentCondition} keyPosition='5' title="Heart infections" />
+        <ConditionsTab currentCondition={currentCondition} setCurrentCondition={setCurrentCondition} keyPosition='1' title="Arrhythmia" />
+        <ConditionsTab currentCondition={currentCondition} setCurrentCondition={setCurrentCondition} keyPosition='2' title="Atherosclerosis" />
+        <ConditionsTab currentCondition={currentCondition} setCurrentCondition={setCurrentCondition} keyPosition='3' title="Cardiomyopathy" />
+        <ConditionsTab currentCondition={currentCondition} setCurrentCondition={setCurrentCondition} keyPosition='4' title="Congenital heart defects" />
+        <ConditionsTab currentCondition={currentCondition} setCurrentCondition={setCurrentCondition} keyPosition='5' title="Heart infections" />
       </div>
       <div className="px-14 pb-14 rounded-lg">
         {Object.keys(selectedConditionData).length > 0 && <Condition selectedConditionData={selectedConditionData} />}
